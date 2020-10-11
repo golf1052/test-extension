@@ -1,0 +1,61 @@
+{
+	"name": "test-extension",
+	"displayName": "test-extension",
+	"description": "Extension used for testing CodeSync",
+	"version": "0.0.1",
+	"publisher": "golf1052",
+	"icon": "images/logo.png",
+	"license": "See license in LICENSE",
+	"homepage": "https://github.com/golf1052/test-extension",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/golf1052/test-extension.git"
+	},
+	"bugs": {
+		"url": "https://github.com/golf1052/test-extension/issues",
+		"email": "golf1052@hey.com"
+	},
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "test-extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.50.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
